@@ -1,0 +1,9 @@
+ <div>
+  <h2>Parent</h2>
+  {{ message }}
+  <br>
+  {{siblingMessage}}
+  <br>
+<button (click)="sendMessage()">Send Message To Child</button>
+<app-child [message]="ourMessage" (parentMessage)="onParentMessage($event)"></app-child>
+ </div>
